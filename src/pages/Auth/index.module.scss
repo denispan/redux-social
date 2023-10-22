@@ -1,0 +1,32 @@
+.container {
+  height: 100%;
+  background-color: #f8f9fa;
+  padding: 10rem;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 4rem;
+  max-width: 500px;
+  text-align: center;
+  border: 1px solid grey;
+  border-radius: 1rem;
+}
+
+.title {
+  margin-bottom: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.field {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
