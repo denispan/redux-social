@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import {IUser} from './types';
+import {IUser, IUserFull} from './types';
 
 interface Props {
   username: string;
@@ -23,6 +23,21 @@ export const fetchUser = createAsyncThunk(
       }
     );
 
-    return data;
+    const {data: fullData} = await axios.get<IUserFull>(
+      `https://dummyjson.com/auth/users/${data.id}`,
+      {
+        headers: {
+          'Authorization': `Bearer ${data.token}`,
+          'Content-Type': 'application/json'
+        },
+      }
+    );
+
+    return {
+      ...data,
+      email: fullData.email,
+      birthDate: fullData.birthDate,
+      maidenName: fullData.maidenName,
+    };
   },
 );

@@ -8,7 +8,13 @@ export interface IUser {
   token: string;
 }
 
+export interface IUserFull extends IUser {
+  email: string;
+  birthDate: string;
+  maidenName: string;
+}
+
 export interface UserSliceState {
-  user: IUser;
+  user: IUserFull;
   status: Status;
 }

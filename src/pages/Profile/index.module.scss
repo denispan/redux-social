@@ -1,0 +1,23 @@
+.container {
+  height: 100%;
+  background-color: #f8f9fa;
+  padding: 10rem;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 4rem;
+  max-width: 500px;
+  text-align: center;
+  border: 1px solid grey;
+  border-radius: 1rem;
+}
+
+.title {
+  margin-bottom: 2rem;
+}
+
+.user_avatar {
+  width: 10rem;
+  height: 10rem;
+}
